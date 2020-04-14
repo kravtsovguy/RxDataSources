@@ -12,10 +12,10 @@ let package = Package(
     .library(name: "Differentiator", targets: ["Differentiator"])
   ],
   dependencies: [
-    .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "5.0.0"))
+    .package(url: "https://github.com/kravtsovguy/ReactiveTools.git", .branch("master"))
   ],
   targets: [
-    .target(name: "RxDataSources", dependencies: ["Differentiator", "RxSwift", "RxCocoa"]),
+    .target(name: "RxDataSources", dependencies: ["Differentiator", "ReactiveTools-Dynamic"]),
     .target(name: "Differentiator"),
     .testTarget(name: "RxDataSourcesTests", dependencies: ["RxDataSources"])
   ],
